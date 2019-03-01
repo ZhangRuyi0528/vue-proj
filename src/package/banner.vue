@@ -1,6 +1,12 @@
 <template>
     <div>
         dd: {{useId}}
+        <svg class="my-svg">
+            <circle class="my-circle" cx="200" cy="100" r="30">
+
+            </circle>
+            <line x1="0" y1="10" x2="200" y2="100" style="stroke:rgb(0,0,0);stroke-width:5" />
+        </svg>
     </div>
 </template>
 
@@ -9,8 +15,6 @@ import createStore from './store';
 import Vuex,{ mapState } from 'vuex';
 import Vue from 'vue';
 Vue.use(Vuex);
-
-import Bannner from '@/Base/banner';
 
 export default {
     name: 'temp',
@@ -45,5 +49,13 @@ export default {
 </script>
 
 <style>
+    .my-svg {
 
+    }
+
+    .my-circle {
+        fill: red;
+        stroke: red;
+        stroke-width: 3pt;
+    }
 </style>

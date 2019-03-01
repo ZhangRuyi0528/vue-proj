@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Bannner from '@/Base/banner';
+import Bannner from '@/package/banner';
 
 export default {
     name: 'temp',
