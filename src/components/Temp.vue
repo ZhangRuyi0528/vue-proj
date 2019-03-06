@@ -1,24 +1,19 @@
 <template>
-    <div>
-        temp
-        <component
-            :is="base"
-            :use-id="a"
-        >
-        </component>
+    <div>temp
+        <component :is="base" :use-id="a"></component>
     </div>
 </template>
 
 <script>
-import Bannner from '@/package/banner';
+import Bannner from "./Footer.vue";
 
 export default {
-    name: 'temp',
+    name: "temp",
 
-    data () {
+    data() {
         return {
-            a: '111'
-        }
+            a: "111"
+        };
     },
 
     components: {
@@ -27,16 +22,15 @@ export default {
 
     computed: {
         AA() {
-            return this.a + 1234567
+            return this.a + 1234567;
         },
 
         base() {
-            return 'Bannner';
+            return "Bannner";
         }
     }
-}
+};
 </script>
 
 <style>
-
 </style>

@@ -1,52 +1,51 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <div class="hello">
+        <h1>{{ msg }}</h1>
+        <h2>Essential Links</h2>
 
-    <div @click="showBanner">
-      <banner
-        useId="333444"
-      />
+        <div @click="showBanner">
+            <banner useId="333444"/>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
-import Banner from '@/package/banner';
+import Banner from "./Footer.vue";
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
+    name: "HelloWorld",
+    data() {
+        return {
+            msg: "Welcome to Your Vue.js App"
+        };
+    },
 
-  components: {
-    Banner
-  },
+    components: {
+        Banner
+    },
 
-  methods: {
-    showBanner() {
-      window.location.pathname += "temp";
+    methods: {
+        showBanner() {
+            window.location.pathname += "temp";
+        }
     }
-  }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+h1,
+h2 {
+    font-weight: normal;
 }
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+    display: inline-block;
+    margin: 0 10px;
 }
 a {
-  color: #42b983;
+    color: #42b983;
 }
 </style>
