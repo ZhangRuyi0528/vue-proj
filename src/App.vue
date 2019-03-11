@@ -3,7 +3,7 @@
         <img src="./assets/logo.png">
         <div class="wrap-page-btn">
             <el-button
-                :type="bg[parseInt(Math.random()*5)]"
+                :type="bg[bgNum]"
                 :span="8"
                 v-for="page in pages"
                 :key="page.path"
@@ -11,7 +11,11 @@
             >{{page.name}}</el-button>
         </div>
         <hr>
+        <!-- 路由组件 -->
         <router-view/>
+        <!-- 公用尾部组件 -->
+        <Footer useId="333444">
+        </Footer>
     </div>
 </template>
 
@@ -20,6 +24,11 @@ import ElementUI from "element-ui";
 import Vue from "vue";
 import "element-ui/lib/theme-chalk/index.css";
 import { pages } from "@/page";
+import Vuex, { mapState } from 'vuex';
+
+import Footer from '@/components/Footer';
+import createStore from "./package/store";
+Vue.use(Vuex);
 Vue.use(ElementUI);
 
 export default {
@@ -30,7 +39,15 @@ export default {
         };
     },
 
+    store: createStore(Vuex),
+
+    components: {
+        Footer
+    },
+
     computed: {
+        ...mapState(['bgNum']),
+
         pages() {
             return pages;
         }

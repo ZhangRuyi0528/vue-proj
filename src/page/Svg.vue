@@ -8,10 +8,8 @@
 </template>
 
 <script>
-import createStore from "../package/store";
-import Vuex, { mapState } from "vuex";
-import Vue from "vue";
-Vue.use(Vuex);
+import { mapState } from "vuex";
+
 
 export default {
     name: "svg",
@@ -25,8 +23,7 @@ export default {
     computed: {
         ...mapState(["trueOrFalse"])
     },
-
-    store: createStore(Vuex),
+   
 
     created() {
         console.log(this.$store.state.trueOrFalse);

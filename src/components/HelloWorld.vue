@@ -2,15 +2,10 @@
     <div class="hello">
         <h1>{{ msg }}</h1>
         <h2>Essential Links</h2>
-
-        <div @click="showBanner">
-            <banner useId="333444"/>
-        </div>
     </div>
 </template>
 
 <script>
-import Banner from "./Footer.vue";
 export default {
     name: "HelloWorld",
     data() {
@@ -18,16 +13,6 @@ export default {
             msg: "Welcome to Your Vue.js App"
         };
     },
-
-    components: {
-        Banner
-    },
-
-    methods: {
-        showBanner() {
-            window.location.pathname += "temp";
-        }
-    }
 };
 </script>
 

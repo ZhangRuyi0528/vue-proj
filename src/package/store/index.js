@@ -1,7 +1,8 @@
 export default (Vuex) => {
     const store = new Vuex.Store({
-        store: {
-            trueOrFalse: false
+        state: {
+            trueOrFalse: false,
+            bgNum: parseInt(Math.random() * 5, 10)
         },
 
         mutations: {
